@@ -1,0 +1,21 @@
+{
+    "name": "PasswordManager - OpenSource",
+    "description" : "A chrome extention that auto fills, stores, and creates passwords.",
+    "version": "1.0",
+    "manifest_version": 2,
+    "browser_action": {
+        "default_popup": "passwordmanager.html",
+        "default_icon": "passwordmanager.png"
+    },
+    "commands": {
+        "_execute_browser_action": {
+          "suggested_key": {
+            "default": "Ctrl+Shift+Z",
+            "mac": "MacCtrl+Shift+Z"
+          },
+          "description": "Opens the password manager menu."
+        }
+    },
+    "permissions": ["tabs", "storage", "activeTab"],
+    "content_security_policy":"script-src 'self' https://apis.google.com; object-src 'self'"
+}
