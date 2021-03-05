@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Password Vault</title>
+</head>
+<style>
+    .grid-container {
+        display: grid;
+        grid-template-areas:
+        'menu header header header header header'
+        'menu main main main main right'
+        'menu main main main main right';
+        grid-gap: 10px;
+        background-color: #2196F3;
+        padding: 10px;
+    }
+    .grid-container > div {
+        background-color: rgba(255, 255, 255, 0.8);
+        color: rgb(226, 0, 0);
+        text-align: center;
+        padding: 20px 0;
+        font-size: 30px;
+    }
+
+    .item1 {
+        grid-area: header;
+        text-align:center;
+    }
+    .item1 > p {
+        display: inline;
+        text-align: left;
+    }
+    .item1 > input {
+        display: inline-block;
+        margin-right: auto;
+        margin-left: auto;
+        text-align: left;
+        padding-left: 10px;
+        background-color: #2499ff77;
+        width: 60%;
+        height: 100%;
+        font-size: large;
+    }
+
+
+    .item2 { grid-area: menu; }
+
+    .item3 { grid-area: main; }
+
+    .item4 { grid-area: right; }
+</style>
+<body>
+    <div class="grid-container">
+        <div class="item1">
+            <p class="leftTitle">PasswordManager</p>
+            <input type="text" id="search" placeholder="Search..."></input>
+        </div>
+        <div class="item2">Menu</div>
+        <div class="item3">Main</div>  
+        <div class="item4">Right</div>
+    </div>
+</body>
+</html>

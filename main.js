@@ -5,6 +5,7 @@ function ready() {
     let mainBox = document.getElementById('mainBox');
     let generatePasswordBox = document.getElementById('generatePasswordBox');
     let generatePassword = document.getElementById('generatePassword');
+    let openVault = document.getElementById('openVault');
     let createPassword = document.getElementById('createPassword');
     let lengthInput = document.getElementById('lengthInput');
     let lengthInputRange = document.getElementById('lengthInputRange');
@@ -13,6 +14,10 @@ function ready() {
     let symbolsBox = document.getElementById('symbolsBox');
     let resultBox = document.getElementById('resultBox');
     let result = document.getElementById('result');
+
+    openVault.onclick = function(element) {
+        chrome.tabs.create({ url: chrome.runtime.getURL("vault.html") });
+    }
 
     generatePassword.onclick = function(element) {
         mainBox.style.display = "none"
