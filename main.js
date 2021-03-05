@@ -7,6 +7,7 @@ function ready() {
     let generatePassword = document.getElementById('generatePassword');
     let createPassword = document.getElementById('createPassword');
     let lengthInput = document.getElementById('lengthInput');
+    let lengthInputRange = document.getElementById('lengthInputRange');
     let capitalsBox = document.getElementById('capitalsBox');
     let numbersBox = document.getElementById('numbersBox');
     let symbolsBox = document.getElementById('symbolsBox');
@@ -29,9 +30,17 @@ function ready() {
         mainBox.style.display = "block"
         generatePasswordBox.style.display = "none"
     }
+
+    lengthInputRange.oninput = function() {
+        updateValue('lengthInput', this.value);
+    }
+
+    lengthInput.oninput = function() {
+        updateValue('lengthInputRange', this.value);
+    }
 }
 
-function updateTextInput(id, val) {
+function updateValue(id, val) {
     document.getElementById(id).value=val;
 }
 
