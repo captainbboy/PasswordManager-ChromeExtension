@@ -7,60 +7,83 @@
     <title>My Password Vault</title>
 </head>
 <style>
+    body {
+        background-color: rgba(13, 0, 31, 0.9);
+        padding: 0;
+        margin: 0;
+    }
+
     .grid-container {
         display: grid;
         grid-template-areas:
         'menu header header header header header'
         'menu main main main main right'
-        'menu main main main main right';
-        grid-gap: 10px;
-        background-color: #2196F3;
-        padding: 10px;
+        'menu main main main main right'
+        'bottom bottom bottom bottom bottom bottom';
+        grid-gap: 0.25vw;
+        background-color: #42eaf0;
+        padding: 0.25vw;
     }
     .grid-container > div {
-        background-color: rgba(255, 255, 255, 0.8);
-        color: rgb(226, 0, 0);
+        background-color: rgb(9, 1, 20);
+        color: rgb(62, 242, 255);
         text-align: center;
-        padding: 20px 0;
-        font-size: 30px;
+        padding: 1vw 1vh 1vw 1vh;
+        font-size: xx-large;
     }
 
-    .item1 {
+    .header {
         grid-area: header;
-        text-align:center;
+        text-align: center;
+        height: 5vh;
     }
-    .item1 > p {
+    .header > p {
         display: inline;
         text-align: left;
     }
-    .item1 > input {
+    .header > input {
         display: inline-block;
         margin-right: auto;
         margin-left: auto;
         text-align: left;
         padding-left: 10px;
-        background-color: #2499ff77;
-        width: 60%;
+        background-color: #064d8b77;
+        color: whitesmoke;
+        width: 30%;
         height: 100%;
         font-size: large;
     }
 
 
-    .item2 { grid-area: menu; }
+    .menu {
+        grid-area: menu;
+    }
 
-    .item3 { grid-area: main; }
+    .main {
+        grid-area: main;
+        height: 75vh;
+    }
 
-    .item4 { grid-area: right; }
+    .rightmenu {
+        grid-area: right;
+        }
+
+    .bottom {
+        grid-area: bottom;
+        height: 5vh;
+    }
+
 </style>
 <body>
     <div class="grid-container">
-        <div class="item1">
+        <div class="header">
             <p class="leftTitle">PasswordManager</p>
             <input type="text" id="search" placeholder="Search..."></input>
         </div>
-        <div class="item2">Menu</div>
-        <div class="item3">Main</div>  
-        <div class="item4">Right</div>
+        <div class="menu">Menu</div>
+        <div class="main">Main</div>  
+        <div class="rightmenu">Right</div>
+        <div class="bottom">Bottom</div>
     </div>
 </body>
 </html>
